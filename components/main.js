@@ -2,7 +2,7 @@ import React, {useState,useEffect,useCallback} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text,Image, View } from 'react-native';
 // import {useFonts} from 'expo-font'
-import {  useFonts, Inter_900Black, Inter_400Regular } from '@expo-google-fonts/inter';
+// import {  useFonts, Inter_900Black, Corbel } from '@expo-google-fonts/inter';
 // import * as SplashScreen from 'expo-splash-screen'
 
 
@@ -32,13 +32,13 @@ export default function App() {
     
   // }
 
-  let [fontsLoaded] = useFonts({
-    Inter_400Regular,
-  });
+//   let [fontsLoaded] = useFonts({
+//     Corbel,
+//   });
 
-  if (!fontsLoaded) {
-    return null;
-  }
+//   if (!fontsLoaded) {
+//     return null;
+//   }
 
 
   return (
@@ -50,10 +50,10 @@ export default function App() {
 
           <View style={styles.header_first_box}>
             <Image
-            source={require('../assets/svg/menu.png')} // Utiliza la prop source para especificar la ruta de la imagen
-            style={{ width: 14, height: 14,left:25,position:'absolute' }} // Define el estilo de la imagen (ancho y alto)
+            source={require('../assets/svg/menu.png')} 
+            style={{ width: 14, height: 14,left:25,position:'absolute' }} 
             />
-            <Text style={{color:'#340068',fontSize:20,fontWeight:'700',fontFamily:'Inter_400Regular'}}>SMART WATER</Text>
+            <Text style={{color:'#340068',fontSize:20,fontWeight:'700',fontFamily:'Corbel'}}>SMART WATER</Text>
           </View>
 
           <View style={styles.header_second_box}>
@@ -64,11 +64,11 @@ export default function App() {
 
 <View style={styles.primera_main_box}>
     <Image
-      source={require('../assets/svg/user.png')} // Utiliza la prop source para especificar la ruta de la imagen
-      style={{ width: 20, height: 20,position:'absolute' }} // Define el estilo de la imagen (ancho y alto)
+      source={require('../assets/svg/user.png')} 
+      style={{ width: 20, height: 20,position:'absolute' }} 
       />
     <View style={styles.primera_main_box_text_child}>
-      <Text style={{color:'#171717',left:34,fontSize:16,fontWeight:'400',fontFamily:'Inter_400Regular'}}>Numero de cliente</Text>
+      <Text style={{color:'#171717',left:34,fontSize:16,fontWeight:'400',fontFamily:'Corbel'}}>Numero de cliente</Text>
       <View style={{backgroundColor:'#171717',width:291,height:1,left:32}}/>
 
     </View>
@@ -76,48 +76,46 @@ export default function App() {
 
 <View style={styles.segunda_main_box}>
     <Image
-      source={require('../assets/svg/botella.png')} // Utiliza la prop source para especificar la ruta de la imagen
-      style={{ width: 20, height: 20,position:'absolute' }} // Define el estilo de la imagen (ancho y alto)
+      source={require('../assets/svg/botella.png')}
+      style={{ width: 20, height: 20,position:'absolute' }} 
       />
     <View style={styles.primera_main_box_text_child}>
-      <Text style={{color:'#171717',left:34,fontSize:16,fontWeight:'400',fontFamily:'Inter_400Regular'}}>Producto</Text>
+      <Text style={{color:'#171717',left:34,fontSize:16,fontWeight:'400',fontFamily:'Corbel'}}>Producto</Text>
       <View style={{backgroundColor:'#171717',width:291,height:1,left:32}}/>
 
     </View>
  
     <Image
-      source={require('../assets/svg/flecha.png')} // Utiliza la prop source para especificar la ruta de la imagen
-      style={{ width: 12, height: 12,top:7,position:'absolute',right:-30 }} // Define el estilo de la imagen (ancho y alto)
+      source={require('../assets/svg/flecha.png')}
+      style={{ width: 12, height: 12,top:7,position:'absolute',right:-30 }} 
       />
  
 </View>
 
 <View style={styles.tercera_main_box}>
     <Image
-      source={require('../assets/svg/cantidad.png')} // Utiliza la prop source para especificar la ruta de la imagen
-      style={{ width: 20, height: 20,position:'absolute' }} // Define el estilo de la imagen (ancho y alto)
+      source={require('../assets/svg/cantidad.png')} 
+      style={{ width: 20, height: 20,position:'absolute' }} 
       />
     <View style={styles.primera_main_box_text_child}>
-      <Text style={{color:'#171717',left:34,fontSize:16,fontWeight:'400',fontFamily:'Inter_400Regular'}}>Cantidad</Text>
+      <Text style={{color:'#171717',left:34,fontSize:16,fontWeight:'400',fontFamily:'Corbel'}}>Cantidad</Text>
       <View style={{backgroundColor:'#fff',width:291,height:1,left:32}}/>   
     </View>
 <View style={{display:'flex',flexDirection:'row',position:'absolute',right:-30}}>
    
-{/* <View style={styles.float}> */}
+
     <Image
-      source={require('../assets/svg/menos2.png')} // Utiliza la prop source para especificar la ruta de la imagen
-      style={{ width: 30,height: 30,}} // Define el estilo de la imagen (ancho y alto)
+      source={require('../assets/svg/menos2.png')}
+      style={{ width: 30,height: 30,}}
       />
-      {/* </View> */}
+ 
+      <Text style={{color:'#404040',marginLeft:7,marginRight:7,fontSize:20,fontWeight:400,fontFamily:'Corbel'}}>01</Text>
       
-      <Text style={{color:'#404040',marginLeft:7,marginRight:7,fontSize:20,fontWeight:400,fontFamily:'Inter_400Regular'}}>01</Text>
-      
-      {/* <View style={styles.float}> */}
     <Image
-      source={require('../assets/svg/add2.png')} // Utiliza la prop source para especificar la ruta de la imagen
-      style={{ width: 30,height: 30,}} // Define el estilo de la imagen (ancho y alto)
+      source={require('../assets/svg/add2.png')} 
+      style={{ width: 30,height: 30,}} 
       />
-      {/* </View> */}
+   
 </View>
 
 </View>
@@ -126,11 +124,11 @@ export default function App() {
 
 <View style={styles.cuarta_main_box}>
     <Image
-      source={require('../assets/svg/peso.png')} // Utiliza la prop source para especificar la ruta de la imagen
-      style={{ width: 20, height: 20,position:'absolute' }} // Define el estilo de la imagen (ancho y alto)
+      source={require('../assets/svg/peso.png')} 
+      style={{ width: 20, height: 20,position:'absolute' }} 
       />
     <View style={styles.primera_main_box_text_child}>
-      <Text style={{color:'#171717',left:34,fontSize:16,fontWeight:'400',fontFamily:'Inter_400Regular'}}>Numero de cliente</Text>
+      <Text style={{color:'#171717',left:34,fontSize:16,fontWeight:'400',fontFamily:'Corbel'}}>Numero de cliente</Text>
       <View style={{backgroundColor:'#171717',width:291,height:1,left:32}}/>
 
     </View>
@@ -144,10 +142,10 @@ export default function App() {
 
         <View style={styles.boton_mas}>
         <Image
-          source={require('../assets/svg/add.png')} // Utiliza la prop source para especificar la ruta de la imagen
-          style={{ width: 15, height: 15 }} // Define el estilo de la imagen (ancho y alto)
+          source={require('../assets/svg/add.png')}
+          style={{ width: 15, height: 15 }} 
         />
-          {/* <Text style={styles.mas}>+</Text> */}
+        
         </View>
 
         <Text style={styles.agregar_otro_producto}>Agregar otro producto</Text>
@@ -206,7 +204,7 @@ const styles = StyleSheet.create({
     alignItems:'center' 
   },
   texto_boton_vender:{
-    fontFamily:'Inter_400Regular',
+    fontFamily:'Corbel',
     fontWeight:'700',
     fontSize:20,
     textAlign:'center',
@@ -232,12 +230,9 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 4,
   },
-  // mas:{
-  //  fontSize:30,
-  //  backgroundColor:'red'
-  // },
+
   agregar_otro_producto:{
-    fontFamily:'Inter_400Regular',
+    fontFamily:'Corbel',
     fontWeight:'400',
     fontSize:16,
     top:458,
@@ -309,7 +304,6 @@ const styles = StyleSheet.create({
   },
   primera_main_box_text_child:{
     height:28,
-    // backgroundColor:'red'
     display:'flex',
     flexDirection:'column'
   },
@@ -320,10 +314,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 8,
-    shadowColor: '#000', // Color de la sombra
-    shadowOffset: { width: 0, height: '-200px' }, // Desplazamiento de la sombra
-    shadowOpacity: 0.1, // Opacidad de la sombra
-    shadowRadius: 50, // Radio de desenfoque de la sombra
-    elevation: 20, // Efecto de elevación (solo para Android)
+    shadowColor: '#000', 
+    shadowOffset: { width: 0, height: '-200px' }, 
+    shadowOpacity: 0.1, 
+    shadowRadius: 50, 
+    elevation: 20, 
   },
 });
